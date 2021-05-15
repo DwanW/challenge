@@ -3,11 +3,16 @@ const defaultInput = "brrybrybrry";
 let input =
   typeof process.argv[2] === "string" ? process.argv[2] : defaultInput;
 
-// result will be true or false
 function canItCreateNoMoreThanTwoTri(inputString) {
+  //validate input type
+  if (inputString.length !== 11 || !/^[rby]*$/.test(input)) {
+    console.log("invalid input");
+    return;
+  }
   let minimum = Infinity;
   let colors = "rby"; //red, blue, yellow
 
+  // check for each combination and get the minimum
   for (let a = 0; a < colors.length; a++) {
     for (let b = 0; b < colors.length; b++) {
       for (let c = 0; c < colors.length; c++) {
@@ -25,6 +30,7 @@ function canItCreateNoMoreThanTwoTri(inputString) {
     }
   }
   console.log({ minimum });
+
   if (minimum < 3) {
     console.log(true);
   } else {
@@ -33,7 +39,7 @@ function canItCreateNoMoreThanTwoTri(inputString) {
 }
 
 function checkNumOfCompleteTri(a, b, c, inputString) {
-  //check 15 triangles formed by each combination
+  //check complete triangles formed by each combination of 15 triangles
   let numOfCompleteTri = 0;
 
   // corner color from triangle 1 to 15
@@ -55,11 +61,17 @@ function checkNumOfCompleteTri(a, b, c, inputString) {
     [a, b, c],
   ];
 
-  for (let i = 0; i< triangle_table.length; i++){
-    if(triangle_table[i][0] !== triangle_table[i][1] && triangle_table[i][1] !== triangle_table[i][2] && triangle_table[i][0] !== triangle_table[i][2]){
-        numOfCompleteTri++;
+  for (let i = 0; i < triangle_table.length; i++) {
+    // condition for complete triangles r !== b, r!==y, b!==y
+    if (
+      triangle_table[i][0] !== triangle_table[i][1] &&
+      triangle_table[i][1] !== triangle_table[i][2] &&
+      triangle_table[i][0] !== triangle_table[i][2]
+    ) {
+      numOfCompleteTri++;
     }
 
+    // if counts exceeds 2 stop counting
     if (numOfCompleteTri > 2) {
       break;
     }
