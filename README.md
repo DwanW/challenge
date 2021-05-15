@@ -50,7 +50,7 @@ I would try to analyze more critically what the question is asking, also there a
 
 The environment for this code is node 12+
 
-To run the code, in the terminal, run the following command(this run with default)
+To run the code, in the terminal, run the following command(this run with default input)
 
 ```
 node solution.js
@@ -69,6 +69,7 @@ Input constrain:
 - input length must be 11 (11 colored corners)
 
 this will provide custom color for the dot in the above marked sequence.
+example:
 
 ```
 node solution.js brrybrybrry
