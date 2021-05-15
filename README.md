@@ -38,15 +38,15 @@ at this point I decided to search all possibilities since we only have 3 variabl
 
 I have looked up graph coloring and polygon triangulation since it was the first thing that came to my mind, however I did not use any of them to complete this challenge.
 
-# How long it took
+# How long did it took
 
 It took me approximately 4 hours.
 
-# What I would Improve if I had to start over again.
+# What I would improve if I had to start over again.
 
 I would try to analyze more critically what the question is asking, also there are some hypothesis and patterns which may improve the solutions, and I would like to dive deep into those possible patterns to make my solution better.
 
-# Installation && Execution
+# Installation & Execution
 
 The environment for this code is node 12+
 
