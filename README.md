@@ -16,13 +16,13 @@ How to get complete triangles:
 when three sides are present in a triangle: red-blue, red-yellow, blue-yellow. While filling color, what we are essentially creating is either mono-colored sides(eg.red-red) or mixed-colored sides(color1-color2), by always coloring in a way that can create new mixed-colored sides will result in complete triangle.
 
 How to not get complete triangles:
-Because we are limiting the number of complete triangles, there are some restrictions when filling the colors while the connected dots are colored.(eg. if the connecting dots are blue and red, then yellow must be avoided to not get a complete triangle). Also sometimes it is unavoidable to get a complete triangle. for example, when the dot is connected to three different sides (red-blue, red-yellow, blue-yellow), then no matter which color you fill will result in a complete triangle.
+Because we are limiting the number of complete triangles, there are some restrictions when filling the colors while the connected dots are colored.(eg. if the connecting dots are blue and red, then yellow must be avoided to not get a complete triangle). Also sometimes it is unavoidable to get a complete triangle. for example, when the dot is connected to three different sides (red-blue, red-yellow, blue-yellow), then no matter which color you fill will result in a complete triangle. In addition, filling the color in a way that creates mono colored side will not result in complete triangle.(complete triangle does not have mono colored side)
 
 This reminds me of doing sudoku where you start from places with the most restriction and then it will in turn provide restriction for other parts of the grid. So in this case, it make sense to start from the outside and work our way inside the polygon. In order to avoid getting complete triangle while coloring, one trick is to make sure we have _consistent sides_ that face in ward. Suppose you start from top right corner:
 
 ![](/step1.jpg)
 
-notice the yellow-blue and blue-red sides are essentially transported inward while we created a mono colored side(blue-blue), mono colored side do not affect how we evaluate complete triangles, since complete triangles do not have mono colored side. Same goes with the top left corner, we have blue-red and red-red, to make the sides consistent, we filled it with red, and we created red-red and blue-red and red-red.
+notice the yellow-blue and blue-red sides are essentially transported inward while we created a mono colored side(blue-blue), again, mono colored side do not affect how we evaluate complete triangles, since complete triangles do not have mono colored side. Same goes with the top left corner, we have blue-red and red-red, to make the sides consistent, we filled it with red, and we created red-red and blue-red and red-red.
 
 and continuing this way we get
 
