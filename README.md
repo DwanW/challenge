@@ -82,7 +82,7 @@ The output
 boolean
 ```
 
-The first line displays the minimum number of complete triangles that can be found.
+The first line displays the minimum number of complete triangles that counted(note: if this value is 3, it does not necessarily mean minimum number of complete triangles is 3, since the count stops at 3).
 
 The second line answer to the initial question: “Can you color the inside dots so as to create two complete triangles and no more?”
 
